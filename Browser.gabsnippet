@@ -12,9 +12,3 @@ F.Intrinsic.UI.Browser("%Prompt%","%Connection%",V.Local.sSQL,V.Local.sCol,V.Loc
 F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
 	||
 F.Intrinsic.Control.EndIf
-
-[[File Browser]]
-Function.Intrinsic.UI.ShowOpenFileDialog("","%File Description%|%File Extension%",%Flags%,%Return Path%)
-F.Intrinsic.Control.If(%Return Path%,<>,"***CANCEL***")
-
-F.Intrinsic.Control.EndIf
