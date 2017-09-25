@@ -1,0 +1,24 @@
+[[Widget Dock]]
+'DESCRIPTION:
+'Docking functionality for widget programs.
+'This functionality should "dock" the appropriate form to the Menu Workspace panel, and hide all undocked forms.
+'Should also handle the WidgetRequestDock event, which is invoked by the menu.
+
+'TODO:
+'Alter suggested code below as necessary.
+'Add an event handler to call this subroutine for event WidgetRequestDock in Sub Main or Sub Widget_Main.
+
+'Hide undocked form
+Gui.%WidgetUndockedForm%..Visible(False)
+
+'Show docked form
+Gui.%WidgetDockedForm%..Show
+
+'Apply current menu theme
+Gui.%WidgetDockedForm%..ApplyTheme
+
+'Dock docked form to menu
+Gui.%WidgetDockedForm%..DockWidget
+
+'Notify the menu of preferred Widget width, based on %WidgetDockedForm%'s width.
+Gui.%WidgetDockedForm%..RequestDockWidth

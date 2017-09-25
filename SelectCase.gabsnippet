@@ -1,0 +1,5 @@
+[[Select Case]]
+F.Intrinsic.Control.SelectCase(%Variable%)
+	F.Intrinsic.Control.Case(%Value1%)
+		||
+F.Intrinsic.Control.EndSelect

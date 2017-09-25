@@ -1,0 +1,26 @@
+[[Widget Main]]
+'DESCRIPTION:
+'Template for Sub Main as it pertains to widgets.
+'Should dock appropriate widget form, and add widget event handlers.
+
+'TODO:
+'Alter suggested code below as necessary.
+
+'Determine if Menu is currently able to host widgets
+F.Intrinsic.Control.If(V.Ambient.IsWidgetCapable,=,True)
+	'Add all Widget Event Handlers
+	F.Intrinsic.Control.CallSub(%WidgetEventHandlersSub%)
+
+	'Set Docked Widget form Dock permissions, i.e., enable/disable the menu from docking/undocking.
+	Gui.%WidgetDockedForm%..AllowDock(1)
+	Gui.%WidgetDockedForm%..AllowUndock(1)
+
+	'Set Minimum Widget Size
+	Gui.%WidgetDockedForm%..SetMinWidgetSize(200,300)
+
+	'Call the Dock Widget sub, which will open the starting form as a widget docked within the menu window.
+	F.Intrinsic.Control.CallSub(%WidgetDock%)
+F.Intrinsic.Control.Else
+	'If Widget functionality is not enabled, show non-docked form
+	F.Intrinsic.Control.CallSub(%WidgetUndock%)
+F.Intrinsic.Control.EndIf

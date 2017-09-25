@@ -1,0 +1,15 @@
+[[Widget EventHandlers]]
+'DESCRIPTION:
+'Adds all Widget event handlers.
+'This sub should add a sub to handle all of the following events:
+'WidgetRequestDock, WidgetRequestUndock, WidgetDockResize, WidgetRequestClose, WidgetThemeChange
+
+'TODO:
+'Add or rename the following subs as necessary:
+'%WidgetDock%, %WidgetUndock%, %WidgetResize%, %WidgetUnload%, and %WidgetThemeChanged%.
+
+F.Intrinsic.Control.AddEventHandler("WidgetRequestDock",%WidgetDock%)
+F.Intrinsic.Control.AddEventHandler("WidgetRequestUndock",%WidgetUndock%)
+F.Intrinsic.Control.AddEventHandler("WidgetDockResize",%WidgetResize%)
+F.Intrinsic.Control.AddEventHandler("WidgetRequestClose",%WidgetUnload%)
+F.Intrinsic.Control.AddEventHandler("WidgetThemeChange",%WidgetThemeChanged%)

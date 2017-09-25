@@ -1,0 +1,4 @@
+[[Do Until Loop]]
+F.Intrinsic.Control.DoUntil(%Condition%)
+	||
+F.Intrinsic.Control.Loop

@@ -1,0 +1,10 @@
+[[Widget Unload DockedForm]]
+'DESCRIPTION:
+'Handles the Unload Widget event (WidgetRequestClose) event, which is invoked by the menu
+'when the user closes a docked script.
+
+'TODO:
+'Alter suggested code below as necessary.
+'Add an event handler to call this subroutine for event WidgetRequestClose in Sub Main or Sub Widget_Main.
+
+F.Intrinsic.Control.CallSub(Unload)

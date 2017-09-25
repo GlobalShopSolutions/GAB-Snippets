@@ -1,0 +1,7 @@
+[[Local Recordset Scan]]
+F.ODBC.Connection!%Connection%.OpenLocalRecordsetRO("%Recordset%","%SQL Statement%")
+F.Intrinsic.Control.DoUntil(V.ODBC.%Connection%!%Recordset%.EOF,"=",True)
+	||
+	F.ODBC.%Connection%!%Recordset%.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.%Connection%!%Recordset%.Close

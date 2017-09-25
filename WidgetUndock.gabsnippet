@@ -1,0 +1,27 @@
+[[Widget Undock]]
+'DESCRIPTION:
+'Undocking functionality for widget programs.
+'This functionality should "undock" a docked form from the Menu Workspace panel, and display an undocked form in a new window.
+'Should also handle the WidgetRequestUndock event, which is invoked by the menu.
+
+'TODO:
+'Alter suggested code below as necessary.
+'Add an event handler to call this subroutine for event WidgetRequestUndock in Sub Main or Sub Widget_Main.
+
+'Determine if Menu is currently able to host widgets
+F.Intrinsic.Control.If(V.Ambient.IsWidgetCapable,=,True)
+	'Determine if widget is currently docked
+	F.Intrinsic.Control.If(V.Ambient.IsDocked,=,True)
+		'Undock docked form
+		Gui.%WidgetDockedForm%..UndockWidget
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'Hide docked form
+Gui.%WidgetDockedForm%..Visible(False)
+
+'Show undocked form
+Gui.%WidgetUndockedForm%..Show
+
+'Apply current menu theme
+Gui.%WidgetUndockedForm%..ApplyTheme

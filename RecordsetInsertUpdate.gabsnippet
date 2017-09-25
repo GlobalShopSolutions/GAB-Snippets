@@ -1,0 +1,9 @@
+[[Recordset Insert/Update]]
+F.ODBC.Connection!%Connection%.OpenRecordsetRW("%Recordset%","%SQL Statement%")
+F.Intrinsic.Control.If(V.ODBC.%Connection%!%Recordset%.EOF,"=",True)
+	F.ODBC.%Connection%!%Recordset%.AddNew
+	F.ODBC.%Connection%!%Recordset%.Set!keyfield("Value")
+F.Intrinsic.Control.Endif
+F.ODBC.%Connection%!%Recordset%.Set!nonkeyfield("Value")
+F.ODBC.%Connection%!%Recordset%.Update
+F.ODBC.%Connection%!%Recordset%.Close

@@ -1,0 +1,13 @@
+[[Error Handling w/ Message Box]]
+F.Intrinsic.Control.SetErrorHandler("%Sub%_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+||
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("%Sub%_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: %Project%",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf

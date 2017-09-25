@@ -1,0 +1,4 @@
+[[For Loop]]
+F.Intrinsic.Control.For(%Counter%,%StartingValue%,%EndingValue%,%Increment%)
+	||
+F.Intrinsic.Control.Next(%Counter%)

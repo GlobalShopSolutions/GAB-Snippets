@@ -1,0 +1,17 @@
+[[Widget Resize]]
+'DESCRIPTION:
+'Resize functionality for the docked form, if it is currently shown and docked.
+'This functionality should resize the docked form to reflect any resizing of the Menu's host widget container.
+'Should also handle the WidgetDockResize event, which is invoked by the menu.
+
+'TODO:
+'Alter suggested code below as necessary, and any additional resizing code.
+'Add an event handler to call this subroutine for event WidgetDockResize in Sub Main or Sub Widget_Main.
+
+F.Intrinsic.Control.If(V.Screen.%WidgetDockedForm%.Visible,=,True)
+	'Set Form to current Widget Size
+	Gui.%WidgetDockedForm%..SetWidgetSize
+
+	'Other resize form functionality	
+	||
+F.Intrinsic.Control.EndIf

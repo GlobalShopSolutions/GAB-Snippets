@@ -1,0 +1,19 @@
+[[Widget Theme Changed]]
+'DESCRIPTION:
+'Theme changed functionality.
+'This functionality should change the color schema of all forms within the GAB program to reflect the current menu theme.
+'Should also handle the WidgetThemeChange event, which is invoked by the menu.
+
+'TODO:
+'Alter suggested code below as necessary.
+'Add an event handler to call this subroutine for event WidgetThemeChange in Sub Main or Sub Widget_Main.
+
+F.Intrinsic.Control.If(V.Ambient.IsDocked,=,True)
+	'Apply theme for Docked form
+	Gui.%WidgetDockedForm%..ApplyTheme
+F.Intrinsic.Control.Else
+	'Apply theme for Undocked form
+	Gui.%WidgetUndockedForm%..ApplyTheme
+F.Intrinsic.Control.EndIf
+
+'Apply Theme to any other visible forms as necessary

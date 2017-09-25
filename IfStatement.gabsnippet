@@ -1,0 +1,4 @@
+[[If Statement]]
+F.Intrinsic.Control.If(%Condition%)
+	||
+F.Intrinsic.Control.EndIf
