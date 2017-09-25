@@ -1,0 +1,5 @@
+[[File Browser]]
+Function.Intrinsic.UI.ShowOpenFileDialog("","%File Description%|%File Extension%",%Flags%,%Return Path%)
+F.Intrinsic.Control.If(%Return Path%,<>,"***CANCEL***")
+
+F.Intrinsic.Control.EndIf
