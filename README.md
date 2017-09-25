@@ -23,7 +23,7 @@ Wildcard elements of your snippet should be surrounded by percent symbol `%` on 
 To indicate where the cursor should appear once the snippet has been inserted and modified, place two pipe characters in the location it should appear `||`.
 
 ## Contribute
-If you have any GAB snippets you would like to contribute to this repository, fork this repoitsory, make your changes, and submit a pull request.
+If you have any GAB snippets you would like to contribute to this repository, fork this repository, make your changes, and submit a pull request.
 
 You can find more info on this here:
 * https://help.github.com/articles/fork-a-repo/
