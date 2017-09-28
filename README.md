@@ -5,7 +5,7 @@ GAB snippet files for use in GAB Code Editor (3.0+).
 To use, place these files in a folder inside \Global\Plugins named "GAB-Snippets" or "GAB-Snippets-[username]" where "[username]" is a Global shop username *(i.e.: "GAB-Snippets-supervsr")*.
 
 ## Snippet Format
-To add your own snippets, create a text file with the extension **.snippet** and place in snippets folder.
+To add your own snippets, create a text file with the extension **.gabsnippet** and place in snippets folder.
 
 ### Title
 The first line of your snippet should have the title between double brackets (`[[` and `]]`).
